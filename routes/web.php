@@ -3,6 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProviderController;
+
+Route::get('/auth/{provider}/redirect', [ProviderController::class,'redirect']);
+
+Route::get('/auth/{provider}/callback', [ProviderController::class,'callback']);
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });

@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('type');
+            $table->string('account_number');
+            $table->string('account_name');
         });
     }
 
